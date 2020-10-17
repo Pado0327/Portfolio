@@ -1,20 +1,33 @@
+/* Global */
 :root {
-  /* size */
+  /* Size */
   --margin-size-large: 15px;
   --margin-size-medium: 8px
   --padding-size-large: 15px;
   --padding-size-medium: 8px;
   --padding-size-small: 4px;
 
-  /* font size  */
+  /* Font Size  */
+  --font-xlarge: 3rem;
   --font-large: 1.25rem;
   --font-medium: 0.875rem;
   --font-small: 0.75rem;
 
-  /* color */
+  /* Font Weight */
+  --weight-bold: 700;
+  --weight--semi-bold: 600;
+  --weight--regular: 400;
+
+  /* Color */
   --white-color: white;
   --grey-color: grey;
+  --light-grey-color: rgb(233, 233, 233, 0.3);
   --black-color: black;
+}
+
+/* Universal */
+*{
+  box-sizing: border-box;
 }
 
 html,
@@ -34,11 +47,23 @@ li {
 }
 
 
+/* Typography */
+
+.title{
+  font-size: var(--font-xlarge);
+}
+
+
+
+
+/* Header */
+
 header {
   color: var(--white-color);
 }
 
 .header__nav {
+  background-color: transparent;
   position: fixed;
   box-sizing: border-box;
   align-items: center;
@@ -49,6 +74,8 @@ header {
   width: 100%;
   padding: 0 40px
 }
+
+
 
 /*TODO: 나중에 글자 폰트 흘림체 찾아서 처리.*/
 
@@ -81,8 +108,9 @@ header {
   justify-content: center;
 }
 
+/* 여기랑 밑은 vw로 할지 rem으로 할지 고민좀 해보자. */
 .header__introP {
-  font-size: 5vw;
+  font-size: 5rem;
 }
 
 .contactmebtn {
@@ -91,7 +119,7 @@ header {
     border-radius: 10px;
     color: var(--white-color);
     cursor: pointer;
-    font-size: 1.4vw;
+    font-size: 1.5rem; 
     font-weight: bold;
     margin-top: 40px;
     outline:none;
@@ -101,4 +129,49 @@ header {
 
 .contactmebtn:hover {
     transform: scale(1.2);
+}
+
+/* About */
+
+#aboutme{
+  width: 50%;
+  margin: auto;
+  padding: 30px 0;
+}
+
+.aboutme__contents{
+  text-align: center;
+}
+
+.contents__description{
+  display: flex;
+  font-size: 1.3rem;
+}
+
+.contents__description img{
+  height: 300px;
+  width: 200px;
+  border-radius: 50px;
+  margin-right: 80px;
+}
+
+.description{
+  align-self: center;
+}
+
+.contents__icons__container{
+  display: flex;
+  justify-content: space-around;
+  font-size: 70px;
+  padding-top: 50px;
+}
+
+.icon__label{
+  font-size: 1rem;
+}
+
+/* Skills */
+#skills{
+  height: 50vh;
+  background-color: var(--light-grey-color);
 }
