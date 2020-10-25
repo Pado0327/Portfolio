@@ -8,9 +8,10 @@
   --padding-size-small: 4px;
 
   /* Font Size  */
+  --font-xxlarge: 5rem;
   --font-xlarge: 3rem;
-  --font-large: 1.25rem;
-  --font-medium: 0.875rem;
+  --font-large: 1.8rem;
+  --font-medium: 1.25rem;
   --font-small: 0.75rem;
 
   /* Font Weight */
@@ -21,8 +22,9 @@
   /* Color */
   --white-color: white;
   --grey-color: grey;
-  --light-grey-color: rgb(233, 233, 233, 0.3);
+  --light-grey-color: #f4f4f4;
   --black-color: black;
+  --pinkish-white-color: #fff6f6;
 }
 
 /* Universal */
@@ -52,6 +54,10 @@ li {
   font-size: var(--font-xlarge);
 }
 
+h1 {
+  font-size: var(--font-xxlarge);
+}
+
 /* Header */
 
 header {
@@ -65,7 +71,7 @@ header {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  font-size: var(--font-large);
+  font-size: var(--font-medium);
   height: 10%;
   width: 100%;
   padding: 0 40px;
@@ -101,9 +107,6 @@ header {
 }
 
 /* 여기랑 밑은 vw로 할지 rem으로 할지 고민좀 해보자. */
-.header__introP {
-  font-size: 5rem;
-}
 
 .contactmebtn {
   background: transparent;
@@ -126,13 +129,29 @@ header {
 /* About */
 
 #aboutme {
-  width: 50%;
+  text-align: center;
+  position: relative;
   margin: auto;
   padding: 30px 0;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.aboutme__background {
+  position: absolute;
+  z-index: -1;
+  width: 80%;
+  height: 100%;
+  background-color: var(--pinkish-white-color);
+  right: 0;
+  top: 0;
 }
 
 .aboutme__contents {
-  text-align: center;
+  align-self: flex-end;
+  width: 85%;
 }
 
 .contents__description {
@@ -143,12 +162,19 @@ header {
 .contents__description img {
   height: 300px;
   width: 200px;
-  border-radius: 50px;
+  border-radius: 120px;
   margin-right: 80px;
+}
+
+.contents__description__container .aboutme__title {
+  font-size: var(--font-large);
+  width: 65%;
+  margin-bottom: calc(var(--margin-size-large) * 2.5);
 }
 
 .description {
   align-self: center;
+  width: 65%;
 }
 
 .contents__icons__container {
@@ -156,6 +182,7 @@ header {
   justify-content: space-around;
   font-size: 70px;
   padding-top: 50px;
+  width: 80%;
 }
 
 .icon__label {
@@ -165,27 +192,76 @@ header {
 /* Skills */
 #skills {
   height: auto;
-  background-color: var(--light-grey-color);
   text-align: center;
+  height: 80vh;
+  background-color: #fff5ea;
 }
 
-#skills .skills__item {
-  display: inline-block;
-  margin-right: 30px;
+.skills__background {
+  right: 0;
+  background-color: var(--white-color);
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.skills__title {
+  padding-left: 3vw;
+}
+
+.skills__item {
   width: 7rem;
   height: 7rem;
+}
+
+.skills__item:hover {
   border-radius: 30px 30px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.skills__container {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.front__container {
+  padding: 0px 30px;
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #fffde0;
+}
+
+.skills__frontend {
+  display: flex;
+  justify-content: space-around;
+}
+
+.backend__container {
+  height: 45%;
+  background-color: var(--light-grey-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.skills__backend {
+  display: flex;
+  justify-content: space-around;
 }
 
 #html {
   background: center/ contain no-repeat url(imgs/logo/html.png);
 }
-
 #css {
   background: center / contain no-repeat url(imgs/logo/css.png);
 }
-
 #Js {
   background: center / contain no-repeat url(imgs/logo/js.png);
 }
@@ -201,12 +277,9 @@ header {
 #mongoDB {
   background: center / contain no-repeat url(imgs/logo/mongo.png);
 }
-#cSharp {
-  background: center / contain no-repeat url(imgs/logo/Csharp.png);
-}
-#github {
-  background: center / contain no-repeat url(imgs/logo/github.png);
-}
-#vsCode {
-  background: center / contain no-repeat url(imgs/logo/vs.png);
+
+/* Project */
+
+.project_img {
+  width: 300px;
 }

@@ -37,18 +37,21 @@
     </header>
     <!--About-->
     <section id="aboutme">
+      <div class="aboutme__background"></div>
       <article class="aboutme__contents">
-        <h2 class="title">About Me</h2>
         <div class="contents__description">
           <img src="imgs/selfie.jpg" alt="Jaejin's Photo" />
-          <p class="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur repellendus veniam
-            nihil quidem modi corporis hic quas, fugit doloribus aut, distinctio ipsam mollitia
-            suscipit, officia atque quisquam libero ullam quo? Lorem ipsum dolor sit amet
-            consectetur, adipisicing elit. Perferendis doloribus quas voluptatibus perspiciatis a
-            nesciunt eos, totam soluta, quis, inventore laudantium ad earum autem. Consequuntur quam
-            facilis quidem laboriosam quo?
-          </p>
+          <div class="contents__description__container">
+            <h2 class="aboutme__title">About Me</h2>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur repellendus
+              veniam nihil quidem modi corporis hic quas, fugit doloribus aut, distinctio ipsam
+              mollitia suscipit, officia atque quisquam libero ullam quo? Lorem ipsum dolor sit amet
+              consectetur, adipisicing elit. Perferendis doloribus quas voluptatibus perspiciatis a
+              nesciunt eos, totam soluta, quis, inventore laudantium ad earum autem. Consequuntur
+              quam facilis quidem laboriosam quo?
+            </p>
+          </div>
         </div>
         <div class="contents__icons__container">
           <!-- right left box도 나중에 만들자. -->
@@ -73,40 +76,28 @@
     </section>
     <!--Skills-->
     <section id="skills">
-      <h2 class="title">My skills</h2>
-      <h3 class="skills_description">Front</h3>
-      <section class="skills__front">
-        <div class="front__container">
-          <div class="skills__item" id="html"></div>
-          <div class="skills__item" id="css"></div>
-          <div class="skills__item" id="Js"></div>
+      <div class="skills__background">
+        <h1 class="skills__title">Skills</h1>
+        <div class="skills__container">
+          <section class="front__container">
+            <h2 class="skills_description">Front</h2>
+            <div class="skills__frontend">
+              <div class="skills__item" id="html"></div>
+              <div class="skills__item" id="css"></div>
+              <div class="skills__item" id="Js"></div>
+              <div class="skills__item" id="react"></div>
+            </div>
+          </section>
+          <section class="backend__container">
+            <h2 class="skills_description">Backend</h2>
+            <div class="skills__backend">
+              <div class="skills__item" id="nodeJs"></div>
+              <div class="skills__item" id="oracle"></div>
+              <div class="skills__item" id="mongoDB"></div>
+            </div>
+          </section>
         </div>
-      </section>
-      <h3 class="skills_description">Framework</h3>
-      <section class="skills_framework">
-        <div class="frameworkd__container">
-          <div class="skills__item" id="react"></div>
-          <div class="skills__item" id="nodeJs"></div>
-        </div>
-      </section>
-      <h3 class="skills_description">Backend</h3>
-      <section class="skills__backend">
-        <div class="skills__item" id="oracle"></div>
-        <div class="skills__item" id="mongoDB"></div>
-      </section>
-      <h3 class="skills_description">Others</h3>
-      <section class="skills__others">
-        <div class="others__container">
-          <div class="skills__item" id="cSharp"></div>
-        </div>
-      </section>
-      <h3 class="skills_description">Tools</h3>
-      <section class="skills_etc">
-        <div class="tools__container">
-          <div class="skills__item" id="github"></div>
-          <div class="skills__item" id="vsCode"></div>
-        </div>
-      </section>
+      </div>
     </section>
     <!--Pojects-->
     <section id="project">
@@ -118,32 +109,32 @@
         <button class="category__btn">React<span class="category__count">3</span></button>
       </div>
       <div class="projects__projectsWithDescription">
-        <a href="" class="project" target="blank"
+        <a href="" class="projet_item" target="blank"
           ><img class="project_img" src="imgs/projectsImg/lightAndDarkMode.jpg" alt="lightMode" />
           <h4>Light and Dark Mode</h4>
           <span>Coding with HTML, CSS and JavaScript</span>
         </a>
-        <a href="" class="project" target="blank"
+        <a href="" class="project_item" target="blank"
           ><img class="project_img" src="imgs/projectsImg/RoboFriend.jpg" alt="RoboFriends" />
           <h4>RoboFriends</h4>
           <span>Coding with React</span>
         </a>
-        <a href="" class="project" target="blank"
+        <a href="" class="project_item" target="blank"
           ><img class="project_img" src="imgs/projectsImg/JokeTeller.jpg" alt="Jokegenerater" />
           <h4>Joke Generater</h4>
           <span>Coding with HTML, CSS and JavaScript</span>
         </a>
-        <a href="" class="project" target="blank"
+        <a href="" class="project_item" target="blank"
           ><img class="project_img" src="imgs/projectsImg/MusicPlayer.jpg" alt="musicPlayer" />
           <h4>Music Player</h4>
           <span>Coding with HTML, CSS and JavaScript</span>
         </a>
-        <a href="" class="project" target="blank"
+        <a href="" class="project_item" target="blank"
           ><img class="project_img" src="imgs/projectsImg/PicInPic.jpg" alt="PicInPic" />
           <h4>Pic In Pic</h4>
           <span>Coding with HTML, CSS and JavaScript</span>
         </a>
-        <a href="" class="project" target="blank"
+        <a href="" class="project_item" target="blank"
           ><img
             class="project_img"
             src="imgs/projectsImg/QuoteGenerator.jpg"
