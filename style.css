@@ -133,27 +133,22 @@ header {
 
 #aboutme {
   text-align: center;
-  position: relative;
-  margin: auto;
+  background-color: #171a1e;
   height: 100vh;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
 }
 
 .aboutme__background {
-  position: absolute;
-  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
   width: 80%;
   height: 100%;
   background-color: var(--pinkish-white-color);
-  right: 0;
-  top: 0;
 }
 
 .aboutme__container {
   display: flex;
-  width: 85%;
   height: 70%;
 }
 
@@ -164,10 +159,12 @@ header {
 }
 
 .aboutme__contents img {
+  position: relative;
+  left: -100px;
   height: 400px;
   width: 200px;
   border-radius: 120px;
-  margin-right: 80px;
+  margin-right: 40px;
 }
 
 .contents__container {
