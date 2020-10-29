@@ -3,6 +3,7 @@
   /* Size */
   --margin-size-large: 15px;
   --margin-size-medium: 8px;
+  --margin-size-small: 4px;
   --padding-size-large: 15px;
   --padding-size-medium: 8px;
   --padding-size-small: 4px;
@@ -25,6 +26,7 @@
   --light-grey-color: #f4f4f4;
   --black-color: black;
   --pinkish-white-color: #fff6f6;
+  --tomato-color: #ff5757;
 
   /* Animation */
   --animation-duration: 300ms;
@@ -59,6 +61,16 @@ li {
 
 h1 {
   font-size: var(--font-xxlarge);
+}
+
+h2 {
+  display: inline-block;
+  margin-bottom: 60px;
+  border-bottom: 5px solid var(--tomato-color);
+}
+
+/* TODO: 만약에 바꿀꺼면 여기다 넣으면됨. */
+.background__container {
 }
 
 /* Header */
@@ -99,11 +111,11 @@ header {
 
 .header__main {
   height: 100vh;
+  display: flex;
   background-image: url(imgs/headeBackground.png);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -135,6 +147,7 @@ header {
   text-align: center;
   background-color: #171a1e;
   height: 100vh;
+  border: ;
 }
 
 .aboutme__background {
@@ -169,21 +182,10 @@ header {
 
 .contents__container {
   width: 65%;
-  height: 100%;
+  height: 90%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-}
-
-.aboutme__title,
-.skills__title {
-  display: inline-block;
-  margin-bottom: 60px;
-  border-bottom: 5px solid #ff5757;
-}
-
-.aboutme__skills {
-  margin-top: 60px;
+  justify-content: space-between;
 }
 
 .skills__container {
@@ -226,9 +228,105 @@ header {
 #mongoDB {
   background: center / contain no-repeat url(imgs/logo/mongo.png);
 }
+#cSharp {
+  background: center / contain no-repeat url(imgs/logo/Csharp.png);
+}
+#github {
+  background: center / contain no-repeat url(imgs/logo/github.png);
+}
 
 /* Project */
 
+#project {
+  background-color: var(--white-color);
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 0;
+  text-align: center;
+}
+
+#project .title {
+  margin: 0;
+}
+
+.project__categories {
+  margin: 35px 0;
+}
+
+.category__btn {
+  background-color: var(--white-color);
+  border: 1px solid darkgray;
+  border-radius: 8px;
+  margin-right: var(--margin-size-medium);
+  width: 120px;
+  padding: var(--padding-size-medium) var(--padding-size-large);
+}
+
+.category__btn.active,
+.category__btn:hover {
+  background-color: var(--tomato-color);
+}
+
+.category__btn.active .category__count,
+.category__btn:hover .category__count {
+  top: 0;
+  opacity: 1;
+}
+
+.category__count {
+  border: 1px solid var(co);
+  background-color: orange;
+  border-radius: 50%;
+  color: var(--white-color);
+  display: inline-block;
+  margin-left: var(--margin-size-small);
+  width: 15px;
+  height: 15px;
+  position: relative;
+  top: -15px;
+  left: 8px;
+  opacity: 0;
+  transition: all ease-in var(--animation-duration);
+}
+
+.projects__projectsWithDescription {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project_item {
+  position: relative;
+  margin: 8px;
+  background-color: rgb(245, 245, 245);
+}
+
+.project__description {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: var(--white-color);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.project__description h4 {
+  border-bottom: 1px solid var(--white-color);
+  padding-bottom: var(--padding-size-small);
+}
+
+.project__description:hover {
+  opacity: 0.7;
+}
+
 .project_img {
-  width: 300px;
+  width: 250px;
+  height: 300px;
+  border-radius: 20px;
+  margin: 15px;
 }

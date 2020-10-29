@@ -16,112 +16,131 @@
     <script src="main.js" defer></script>
   </head>
   <body>
-    <!--Header-->
-    <header>
-      <nav class="header__nav">
-        <p class="header__logo">JaeJin Kim</p>
-        <ul class="nav__menulists">
-          <!-- TODO: a link로 스크롤 효과. -->
-          <li>Home</li>
-          <li>About Me</li>
-          <li>Skills</li>
-          <li>Projects</li>
-          <li>Contact Me</li>
-        </ul>
-      </nav>
-      <div class="header__main">
-        <h1 class="header__introP">Portfolio By JaeJinKim</h1>
-        <!--TODO: 위에 글자를 나중에 자바 스크립트로 타입처럼 나오게하고 버튼이 그렇게 안되면 지워버리기-->
-        <button class="contactmebtn">Contact Me</button>
-      </div>
-    </header>
-    <!--About-->
-    <section id="aboutme">
-      <div class="aboutme__background">
-        <div class="aboutme__container">
-         <div class="aboutme__contents">
-          <img src="imgs/selfie.jpg" alt="Jaejin's Photo" id="aboutme__image"/>
-          <div class="contents__container">
-            <div class="description__container">
-              <h2 class="aboutme__title">About Me</h2>
-              <p class="aboutme__description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur repellendus
-              veniam nihil quidem modi corporis hic quas, fugit doloribus aut, distinctio ipsam
-              mollitia suscipit, officia atque quisquam libero ullam quo? Lorem ipsum dolor sit amet
-              consectetur, adipisicing elit. Perferendis doloribus quas voluptatibus perspiciatis a
-              nesciunt eos, totam soluta, quis, inventore laudantium ad earum autem. Consequuntur
-              quam facilis quidem laboriosam quo?
-              </p>
-             </div>
-            <div class="aboutme__skills"">
-              <h2 class="skills__title">Skills</h2>
-              <div class="skills__container">
-                <div class="skills__item" id="html"></div>
-                <div class="skills__item" id="css"></div>
-                <div class="skills__item" id="Js"></div>
-                <div class="skills__item" id="react"></div>
-                <div class="skills__item" id="nodeJs"></div>
-                <div class="skills__item" id="oracle"></div>
-                <div class="skills__item" id="mongoDB"></div>
+    <!-- TODO:: 안쓸꺼면 지워야함. -->
+    <div class="background__container">
+        <!--Header-->
+      <header>
+        <nav class="header__nav">
+          <p class="header__logo">JaeJin Kim</p>
+          <ul class="nav__menulists">
+            <!-- TODO: a link로 스크롤 효과. -->
+            <li>Home</li>
+            <li>About Me</li>
+            <li>Skills</li>
+            <li>Projects</li>
+            <li>Contact Me</li>
+          </ul>
+        </nav>
+        <div class="header__main">
+          <h1 class="header__introP">Portfolio By JaeJinKim</h1>
+          <!--TODO: 위에 글자를 나중에 자바 스크립트로 타입처럼 나오게하고 버튼이 그렇게 안되면 지워버리기-->
+          <button class="contactmebtn">Contact Me</button>
+        </div>
+      </header>
+      <!--About-->
+      <section id="aboutme">
+        <div class="aboutme__background">
+          <div class="aboutme__container">
+           <div class="aboutme__contents">
+            <img src="imgs/selfie.jpg" alt="Jaejin's Photo" id="aboutme__image"/>
+            <div class="contents__container">
+              <div class="description__container">
+                <h2 class="aboutme__title">About Me</h2>
+                <p class="aboutme__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur repellendus
+                veniam nihil quidem modi corporis hic quas, fugit doloribus aut, distinctio ipsam
+                mollitia suscipit, officia atque quisquam libero ullam quo? Lorem ipsum dolor sit amet
+                consectetur, adipisicing elit. Perferendis doloribus quas voluptatibus perspiciatis a
+                nesciunt eos, totam soluta, quis, inventore laudantium ad earum autem. Consequuntur
+                quam facilis quidem laboriosam quo?
+                </p>
+               </div>
+              <div class="aboutme__skills"">
+                <h2 class="skills__title">Skills</h2>
+                <div class="skills__container">
+                  <div class="skills__item" id="html"></div>
+                  <div class="skills__item" id="css"></div>
+                  <div class="skills__item" id="Js"></div>
+                  <div class="skills__item" id="react"></div>
+                  <div class="skills__item" id="nodeJs"></div>
+                  <div class="skills__item" id="oracle"></div>
+                  <div class="skills__item" id="mongoDB"></div>
+                  <div class="skills__item" id="cSharp"></div>
+                  <div class="skills__item" id="github"></div>
+                </div>
               </div>
+            </div>     
+          </div>  
+        </div>
+      </div>
+      </section>
+      <!--Pojects-->
+      <section id="project">
+        <h2 class="title">Projects</h2>
+        <div class="project__categories">
+          <button class="category__btn active">All<span class="category__count">8</span></button>
+          <button class="category__btn">Javascript<span class="category__count">6</span></button>
+          <button class="category__btn">React<span class="category__count">2</span></button>
+        </div>
+        <div class="projects__projectsWithDescription">
+          <a href="" class="project_item" target="blank">
+            <img class="project_img" src="imgs/projectsImg/Carrots&Bugs.jpg" alt="CarrotsAndBugs" />
+            <div class="project__description">
+              <h4>Carrots and Bugs</h4>
+              <span>Coding with HTML, CSS and JavaScript</span>
             </div>
-          </div>     
-        </div>  
-      </div>
+          </a>
+          <a href="" class="project_item" target="blank">
+            <img class="project_img" src="imgs/projectsImg/lightAndDarkMode.jpg" alt="lightMode" />
+            <div class="project__description">
+              <h4>Light and Dark Mode</h4>
+              <span>Coding with HTML, CSS and JavaScript</span>
+            </div>
+          </a>
+          <a href="" class="project_item" target="blank">
+            <img class="project_img" src="imgs/projectsImg/JokeTeller.jpg" alt="Jokegenerater" />
+            <div class="project__description">
+              <h4>Joke Generater</h4>
+              <span>Coding with HTML, CSS and JavaScript</span>
+            </div>
+          </a>
+          <a href="" class="project_item" target="blank">
+            <img class="project_img" src="imgs/projectsImg/MusicPlayer.jpg" alt="musicPlayer" />
+            <div class="project__description">
+              <h4>Music Player</h4>
+              <span>Coding with HTML, CSS and JavaScript</span>
+            </div>
+          </a>
+          <a href="" class="project_item" target="blank">
+            <img class="project_img" src="imgs/projectsImg/PicInPic.jpg" alt="PicInPic" />
+            <div class="project__description">
+              <h4>Pic In Pic</h4>
+              <span>Coding with HTML, CSS and JavaScript</span>
+            </div>
+          </a>
+          <a href="" class="project_item" target="blank">
+            <img class="project_img" src="imgs/projectsImg/QuoteGenerator.jpg" alt="QuoteGenerator"/>
+            <div class="project__description">
+              <h4>QuoteGenerator</h4>
+              <span>Coding with HTML, CSS and JavaScript</span>
+            </div>
+          </a>
+          <a href="" class="project_item" target="blank">
+            <img class="project_img" src="imgs/projectsImg/RoboFriend.jpg" alt="RoboFriends" />
+            <div class="project__description">
+              <h4>RoboFriends</h4>
+              <span>Coding with React</span>
+            </div>
+          </a>
+        </div>
+      </section>
+      <!--Contact-->
+      <section id="contactme">
+        <h2 class="title"></h2>
+        <p class="description"></p>
+        <img src="" alt="" /><img src="" alt="" />
+        <div class="contactme__nav"></div>
+      </section>
     </div>
-    </section>
-    <!--Pojects-->
-    <section id="project">
-      <h2 class="title">Projects</h2>
-      <p class="description"></p>
-      <div class="project__categories">
-        <button class="category__btn">All<span class="category__count">6</span></button>
-        <button class="category__btn">Javascript<span class="category__count">3</span></button>
-        <button class="category__btn">React<span class="category__count">3</span></button>
-      </div>
-      <div class="projects__projectsWithDescription">
-        <a href="" class="projet_item" target="blank"
-          ><img class="project_img" src="imgs/projectsImg/lightAndDarkMode.jpg" alt="lightMode" />
-          <h4>Light and Dark Mode</h4>
-          <span>Coding with HTML, CSS and JavaScript</span>
-        </a>
-        <a href="" class="project_item" target="blank"
-          ><img class="project_img" src="imgs/projectsImg/RoboFriend.jpg" alt="RoboFriends" />
-          <h4>RoboFriends</h4>
-          <span>Coding with React</span>
-        </a>
-        <a href="" class="project_item" target="blank"
-          ><img class="project_img" src="imgs/projectsImg/JokeTeller.jpg" alt="Jokegenerater" />
-          <h4>Joke Generater</h4>
-          <span>Coding with HTML, CSS and JavaScript</span>
-        </a>
-        <a href="" class="project_item" target="blank"
-          ><img class="project_img" src="imgs/projectsImg/MusicPlayer.jpg" alt="musicPlayer" />
-          <h4>Music Player</h4>
-          <span>Coding with HTML, CSS and JavaScript</span>
-        </a>
-        <a href="" class="project_item" target="blank"
-          ><img class="project_img" src="imgs/projectsImg/PicInPic.jpg" alt="PicInPic" />
-          <h4>Pic In Pic</h4>
-          <span>Coding with HTML, CSS and JavaScript</span>
-        </a>
-        <a href="" class="project_item" target="blank"
-          ><img
-            class="project_img"
-            src="imgs/projectsImg/QuoteGenerator.jpg"
-            alt="QuoteGenerator"
-          />
-          <h4>QuoteGenerator</h4>
-          <span>Coding with HTML, CSS and JavaScript</span>
-        </a>
-      </div>
-    </section>
-    <!--Contact-->
-    <section id="contactme">
-      <h2 class="title"></h2>
-      <p class="description"></p>
-      <img src="" alt="" /><img src="" alt="" />
-      <div class="contactme__nav"></div>
-    </section>
   </body>
 </html>
