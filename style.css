@@ -79,6 +79,16 @@ header {
   color: var(--white-color);
 }
 
+#name {
+  color: var(--tomato-color);
+}
+
+header h2 {
+  font-size: var(--font-xlarge);
+  border: none;
+  margin: 10px 0 20px;
+}
+
 .header__nav {
   background-color: transparent;
   position: fixed;
@@ -119,6 +129,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* 여기랑 밑은 vw로 할지 rem으로 할지 고민좀 해보자. */
@@ -238,8 +249,9 @@ header {
 /* Project */
 
 #project {
+  min-height: 100vh;
   background-color: var(--white-color);
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   padding: 50px 0;
   text-align: center;
@@ -298,7 +310,7 @@ header {
 .project_item {
   position: relative;
   margin: 8px;
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(228, 244, 247);
 }
 
 .project__description {
@@ -325,8 +337,48 @@ header {
 }
 
 .project_img {
-  width: 250px;
+  width: 300px;
   height: 300px;
   border-radius: 20px;
-  margin: 15px;
+  margin: 8px;
+  object-fit: cover;
+}
+
+/* Contact */
+
+#contactme {
+  background-color: #171a1e;
+  color: var(--white-color);
+  clip-path: polygon(50% 25%, 100% 0, 100% 100%, 0 100%, 0 0);
+  padding: 140px 0 40px 0;
+  text-align: center;
+}
+
+#contactme .title {
+  margin: 40px 0 10px 0;
+}
+
+#contactme h3 {
+  font-size: var(--font-large);
+}
+
+.contactme__nav {
+  font-size: var(--font-xlarge);
+  margin-bottom: 20px;
+}
+
+.contactme__nav a {
+  text-decoration: none;
+}
+
+.contactme__nav a:link,
+a:visited,
+a:active {
+  color: var(--white-color);
+}
+
+.contactme__nav .fab:hover {
+  color: #438dee;
+  transform: rotate(20deg) scale(1.2);
+  transition: all ease calc(var(--animation-duration) * 1.5);
 }
