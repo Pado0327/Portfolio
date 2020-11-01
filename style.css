@@ -13,7 +13,7 @@
   /* Font Size  */
   --font-xxlarge: 5rem;
   --font-xlarge: 3rem;
-  --font-large: 1.8rem;
+  --font-large: 2rem;
   --font-medium: 1.3rem;
   --font-small: 0.75rem;
 
@@ -145,8 +145,6 @@ header h2 {
   font-weight: bold;
 }
 
-/*TODO: 나중에 글자 폰트 흘림체 찾아서 처리.*/
-
 .nav__menulists {
   display: flex;
   list-style: none;
@@ -172,6 +170,7 @@ header h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 /* 여기랑 밑은 vw로 할지 rem으로 할지 고민좀 해보자. */
@@ -230,7 +229,7 @@ header h2 {
   left: -100px;
   height: 400px;
   width: 200px;
-  border-radius: 120px;
+  border-radius: 50%;
   margin-right: 40px;
 }
 
@@ -240,6 +239,10 @@ header h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.contents__container h2 {
+  font-size: var(--font-large);
 }
 
 .skills__container {
@@ -405,6 +408,10 @@ header h2 {
   font-size: var(--font-large);
 }
 
+.email {
+  font-size: var(--font-medium);
+}
+
 .contactme__nav {
   font-size: var(--font-xlarge);
   margin-bottom: 20px;
@@ -420,3 +427,65 @@ header h2 {
   font-size: var(--font-small);
   opacity: 0.5;
 }
+
+/* media */
+
+@media screen and (max-width: 1000px) {
+  :root {
+    /* Font Size  */
+    --font-xxlarge: 4rem;
+    --font-xlarge: 2.3rem;
+  }
+
+  .contactmebtn {
+    font-size: var(--font-medium);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  :root {
+    /* Font Size  */
+    --font-xxlarge: 3rem;
+    --font-xlarge: 2rem;
+    --font-large: 1.5rem;
+    --font-medium: 1.1rem;
+  }
+
+  /* About me */
+
+  .aboutme__background {
+    padding-top: 30px;
+    width: 100%;
+    float: none;
+    margin: auto;
+  }
+
+  .aboutme__container {
+    height: 100%;
+  }
+
+  .aboutme__contents {
+    flex-direction: column;
+  }
+
+  #aboutme__image {
+    position: static;
+    height: 190px;
+    width: 150px;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .contents__container {
+    justify-content: space-around;
+    width: 80%;
+    padding-bottom: 100px;
+  }
+
+  .skills__item {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+/* TODO: 메뉴 햄버거 만들어야함. 한 550? 그 근처부터   */
