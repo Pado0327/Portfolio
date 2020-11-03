@@ -127,7 +127,6 @@ header h2 {
 .header__nav {
   background-color: transparent;
   position: fixed;
-  box-sizing: border-box;
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -135,9 +134,6 @@ header h2 {
   height: 10%;
   width: 100%;
   padding: 0 40px;
-}
-
-.moved {
 }
 
 .header__logo {
@@ -160,6 +156,20 @@ header h2 {
   opacity: 1;
 }
 
+.mobile__nav__menu {
+  position: fixed;
+  top: 2%;
+  right: 10px;
+  display: none;
+}
+
+.bar {
+  width: 35px;
+  height: 3px;
+  background-color: var(--tomato-color);
+  margin: 8px 0;
+}
+
 .header__main {
   height: 100vh;
   display: flex;
@@ -172,8 +182,6 @@ header h2 {
   justify-content: center;
   text-align: center;
 }
-
-/* 여기랑 밑은 vw로 할지 rem으로 할지 고민좀 해보자. */
 
 .contactmebtn {
   background: transparent;
@@ -196,53 +204,33 @@ header h2 {
 /* About */
 
 #aboutme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  background-color: #171a1e;
-  height: 100vh;
-}
-
-.aboutme__background {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  float: right;
-  width: 80%;
-  height: 100%;
   background-color: var(--pinkish-white-color);
+  padding: 50px 0;
 }
 
-.aboutme__container {
-  display: flex;
-  height: 70%;
-  width: 100%;
-}
-
-.aboutme__contents {
-  display: flex;
-  align-items: center;
-  font-size: var(--font-medium);
-  width: 100%;
-}
-
-.aboutme__contents img {
-  position: relative;
-  left: -100px;
-  height: 400px;
+#aboutme__image {
+  height: 250px;
   width: 200px;
   border-radius: 50%;
-  margin-right: 40px;
+  margin-bottom: 50px;
 }
 
 .contents__container {
+  margin: auto;
   width: 65%;
-  height: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  font-size: var(--font-medium);
 }
 
 .contents__container h2 {
   font-size: var(--font-large);
+}
+
+.description__container {
+  margin-bottom: 100px;
 }
 
 .skills__container {
@@ -311,7 +299,7 @@ header h2 {
   margin: 35px 0;
 }
 
-.category__btn {
+.project__btn {
   background-color: var(--white-color);
   border: 1px solid darkgray;
   border-radius: 8px;
@@ -320,18 +308,18 @@ header h2 {
   padding: var(--padding-size-medium) var(--padding-size-large);
 }
 
-.category__btn.active,
-.category__btn:hover {
+.project__btn.active,
+.project__btn:hover {
   background-color: var(--tomato-color);
 }
 
-.category__btn.active .category__count,
-.category__btn:hover .category__count {
+.project__btn.active .project__count,
+.project__btn:hover .project__count {
   top: 0;
   opacity: 1;
 }
 
-.category__count {
+.project__count {
   border: 1px solid var(co);
   background-color: orange;
   border-radius: 50%;
@@ -353,10 +341,10 @@ header h2 {
   justify-content: center;
 }
 
-.project_item {
+.project__item {
   position: relative;
   margin: 8px;
-  background-color: rgb(228, 244, 247);
+  background-color: #e4f4f7;
 }
 
 .project__description {
@@ -382,7 +370,7 @@ header h2 {
   opacity: 0.7;
 }
 
-.project_img {
+.project__img {
   width: 300px;
   height: 300px;
   border-radius: 20px;
@@ -430,7 +418,7 @@ header h2 {
 
 /* media */
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
   :root {
     /* Font Size  */
     --font-xxlarge: 4rem;
@@ -439,6 +427,17 @@ header h2 {
 
   .contactmebtn {
     font-size: var(--font-medium);
+  }
+
+  /* Aboutme */
+
+  #aboutme__image {
+    height: 190px;
+    width: 150px;
+  }
+
+  .contents__container {
+    width: 90%;
   }
 }
 
@@ -452,40 +451,97 @@ header h2 {
   }
 
   /* About me */
-
-  .aboutme__background {
-    padding-top: 30px;
-    width: 100%;
-    float: none;
-    margin: auto;
-  }
-
-  .aboutme__container {
-    height: 100%;
-  }
-
-  .aboutme__contents {
-    flex-direction: column;
-  }
-
-  #aboutme__image {
-    position: static;
-    height: 190px;
-    width: 150px;
-    margin: 0;
-    border-radius: 0;
-  }
-
-  .contents__container {
-    justify-content: space-around;
-    width: 80%;
-    padding-bottom: 100px;
-  }
-
   .skills__item {
     height: 50px;
     width: 50px;
   }
 }
 
-/* TODO: 메뉴 햄버거 만들어야함. 한 550? 그 근처부터   */
+@media screen and (max-width: 600px) {
+  .header__nav {
+    flex-direction: column;
+    height: 25%;
+    justify-content: space-around;
+    padding: 0;
+    text-align: center;
+  }
+
+  .nav__menulists {
+    flex-direction: column;
+    height: 60%;
+  }
+
+  .list__item {
+    margin: var(--margin-size-medium) 0;
+  }
+
+  .list__item a {
+    display: inline-block;
+    margin: 0;
+    transition: all ease var(--animation-duration);
+  }
+
+  .list__item a:hover {
+    transform: scale(1.2);
+  }
+
+  .mobile__nav__menu {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  /* About me */
+  .skills__container {
+    margin: auto;
+    width: 80%;
+  }
+
+  #aboutme__image {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  :root {
+    /* Font Size  */
+    --font-xxlarge: 2.4rem;
+    --font-xlarge: 1.5rem;
+    --font-large: 1.3rem;
+    --font-medium: 1rem;
+  }
+
+  /* About me  */
+  #aboutme h2 {
+    margin: 20px 0 40px 0;
+  }
+
+  /* project */
+  .project__btn {
+    width: 90px;
+  }
+
+  .project__btn:nth-child(2) {
+    width: 120px;
+  }
+
+  .project__img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .project__btn {
+    width: 70px;
+    padding: 5px 2px;
+  }
+
+  .project__btn:nth-child(2) {
+    width: 100px;
+  }
+
+  .project__count {
+    left: 3px;
+  }
+}
