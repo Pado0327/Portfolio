@@ -16,142 +16,135 @@
     <script src="main.js" defer></script>
   </head>
   <body>
-    <!-- TODO:: 안쓸꺼면 지워야함. -->
-    <div class="background__container">
-      <!--Header-->
-      <header id="home">
-        <nav class="header__nav">
-          <a href="#home" class="header__logo">JJ Kim</a>
-          <ul class="nav__menulists">
-            <li class="list__item"><a href="#home">Home</a></li>
-            <li class="list__item"><a href="#aboutme">About Me</a></li>
-            <li class="list__item"><a href="#project">Projects</a></li>
-            <li class="list__item"><a href="#contactme">Contact Me</a></li>
-          </ul>
-        </nav>
-        <div class="header__main">
-          <h1 class="header__introP primary">Hello, my name is <span id="name">Jaejin!</span></h1>
-          <h2 class="primary">I'M A FRONT-END WEB DEVELOPER</h2>
-          <!--TODO: 위에 글자를 나중에 자바 스크립트로 타입처럼 나오게하고 버튼이 그렇게 안되면 지워버리기-->
-          <button class="contactmebtn">Contact Me</button>
+    <!--Header-->
+    <header id="home">
+      <nav class="header__nav">
+        <a href="#home" class="header__logo">JJ Kim</a>
+        <ul class="nav__menulists">
+          <li class="list__item"><a href="#home">Home</a></li>
+          <li class="list__item"><a href="#aboutme">About Me</a></li>
+          <li class="list__item"><a href="#project">Projects</a></li>
+          <li class="list__item"><a href="#contactme">Contact Me</a></li>
+        </ul>
+      </nav>
+      <div class="header__main">
+        <h1 class="header__introP primary">Hello, my name is <span id="name">Jaejin!</span></h1>
+        <h2 class="primary">I'M A FRONT-END WEB DEVELOPER</h2>
+        <!--TODO: 위에 글자를 나중에 자바 스크립트로 타입처럼 나오게하고 버튼이 그렇게 안되면 지워버리기-->
+        <button class="contactmebtn">Contact Me</button>
+      </div>
+      <div class="mobile__nav__menu">
+        <div class="menubar1 bar"></div>
+        <div class="menubar2 bar"></div>
+        <div class="menubar3 bar"></div>
+      </div>
+    </header>
+    <!--About-->
+    <section id="aboutme">
+      <img src="imgs/selfie.jpg" alt="Jaejin's Photo" id="aboutme__image" />
+      <div class="contents__container">
+        <div class="description__container">
+          <h2 class="aboutme__title primary">About Me</h2>
+          <p class="aboutme__description">
+            "no pain, no gain" "no bee, no honey" <br /><br />
+            원하는 바를 이루기 위해 항상 배움을 게을리 하지 않고 열심히 앞으로 나아가는
+            개발자입니다. 나의 약점과 강점을 명확히 알아 약점을 보완하고 강점을 더 돋보이게하는
+          </p>
         </div>
-        <div class="mobile__nav__menu">
-          <div class="menubar1 bar"></div>
-          <div class="menubar2 bar"></div>
-          <div class="menubar3 bar"></div>
-        </div>
-      </header>
-      <!--About-->
-      <section id="aboutme">
-        <img src="imgs/selfie.jpg" alt="Jaejin's Photo" id="aboutme__image" />
-        <div class="contents__container">
-          <div class="description__container">
-            <h2 class="aboutme__title primary">About Me</h2>
-            <p class="aboutme__description">
-              "no pain, no gain" "no bee, no honey" <br /><br />
-              원하는 바를 이루기 위해 항상 배움을 게을리 하지 않고 열심히 앞으로 나아가는
-              개발자입니다. 나의 약점과 강점을 명확히 알아 약점을 보완하고 강점을 더 돋보이게하는
-            </p>
-          </div>
-          <div class="aboutme__skills">
-            <h2 class="skills__title primary">Skills</h2>
-            <div class="skills__container">
-              <div class="skills__item" id="html"></div>
-              <div class="skills__item" id="css"></div>
-              <div class="skills__item" id="Js"></div>
-              <div class="skills__item" id="react"></div>
-              <div class="skills__item" id="nodeJs"></div>
-              <div class="skills__item" id="oracle"></div>
-              <div class="skills__item" id="mongoDB"></div>
-              <div class="skills__item" id="cSharp"></div>
-              <div class="skills__item" id="github"></div>
-            </div>
+        <div class="aboutme__skills">
+          <h2 class="skills__title primary">Skills</h2>
+          <div class="skills__container">
+            <div class="skills__item" id="html"></div>
+            <div class="skills__item" id="css"></div>
+            <div class="skills__item" id="Js"></div>
+            <div class="skills__item" id="react"></div>
+            <div class="skills__item" id="nodeJs"></div>
+            <div class="skills__item" id="oracle"></div>
+            <div class="skills__item" id="mongoDB"></div>
+            <div class="skills__item" id="cSharp"></div>
+            <div class="skills__item" id="github"></div>
           </div>
         </div>
-      </section>
-      <!--Pojects-->
-      <section id="project">
-        <h2 class="title primary">Projects</h2>
-        <div class="project__categories">
-          <button class="project__btn active">All<span class="project__count">8</span></button>
-          <button class="project__btn">Javascript<span class="project__count">6</span></button>
-          <button class="project__btn">React<span class="project__count">2</span></button>
-        </div>
-        <div class="projects__projectsWithDescription">
-          <a href="" class="project__item" target="blank">
-            <img
-              class="project__img"
-              src="imgs/projectsImg/Carrots&Bugs.jpg"
-              alt="CarrotsAndBugs"
-            />
-            <div class="project__description">
-              <h4 class="primary">Carrots and Bugs</h4>
-              <span>Coding with HTML, CSS and JavaScript</span>
-            </div>
-          </a>
-          <a href="" class="project__item" target="blank">
-            <img class="project__img" src="imgs/projectsImg/lightAndDarkMode.jpg" alt="lightMode" />
-            <div class="project__description">
-              <h4 class="primary">Light and Dark Mode</h4>
-              <span>Coding with HTML, CSS and JavaScript</span>
-            </div>
-          </a>
-          <a href="" class="project__item" target="blank">
-            <img class="project__img" src="imgs/projectsImg/JokeTeller.jpg" alt="Jokegenerater" />
-            <div class="project__description">
-              <h4 class="primary">Joke Generater</h4>
-              <span>Coding with HTML, CSS and JavaScript</span>
-            </div>
-          </a>
-          <a href="" class="project__item" target="blank">
-            <img class="project__img" src="imgs/projectsImg/MusicPlayer.jpg" alt="musicPlayer" />
-            <div class="project__description">
-              <h4 class="primary">Music Player</h4>
-              <span>Coding with HTML, CSS and JavaScript</span>
-            </div>
-          </a>
-          <a href="" class="project__item" target="blank">
-            <img class="project__img" src="imgs/projectsImg/PicInPic.jpg" alt="PicInPic" />
-            <div class="project__description">
-              <h4 class="primary">Pic In Pic</h4>
-              <span>Coding with HTML, CSS and JavaScript</span>
-            </div>
-          </a>
-          <a href="" class="project__item" target="blank">
-            <img
-              class="project__img"
-              src="imgs/projectsImg/QuoteGenerator.png"
-              alt="QuoteGenerator"
-            />
-            <div class="project__description">
-              <h4 class="primary">QuoteGenerator</h4>
-              <span>Coding with HTML, CSS and JavaScript</span>
-            </div>
-          </a>
-          <a href="" class="project__item" target="blank">
-            <img class="project__img" src="imgs/projectsImg/RoboFriends.png" alt="RoboFriends" />
-            <div class="project__description">
-              <h4 class="primary">RoboFriends</h4>
-              <span>Coding with React</span>
-            </div>
-          </a>
-        </div>
-      </section>
-      <!--Contact-->
-      <section id="contactme">
-        <h2 class="title primary">Contact</h2>
-        <h3 class="primary">Let's Talk</h3>
-        <p class="email">pado0327@gamil.com</p>
-        <div class="contactme__nav">
-          <a href="http://www.linkedin.com/in/pado0327" target="_blank">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="http://github.com/Pado0327" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-        <p class="conntactme__rights">2020 JaejinKim - All rights reserved.</p>
-      </section>
-    </div>
+      </div>
+    </section>
+    <!--Pojects-->
+    <section id="project">
+      <h2 class="title primary">Projects</h2>
+      <div class="project__categories">
+        <button class="project__btn active">All<span class="project__count">8</span></button>
+        <button class="project__btn">Javascript<span class="project__count">6</span></button>
+        <button class="project__btn">React<span class="project__count">2</span></button>
+      </div>
+      <div class="projects__projectsWithDescription">
+        <a href="" class="project__item" target="blank">
+          <img class="project__img" src="imgs/projectsImg/Carrots&Bugs.jpg" alt="CarrotsAndBugs" />
+          <div class="project__description">
+            <h4 class="primary">Carrots and Bugs</h4>
+            <span>Coding with HTML, CSS and JavaScript</span>
+          </div>
+        </a>
+        <a href="" class="project__item" target="blank">
+          <img class="project__img" src="imgs/projectsImg/lightAndDarkMode.jpg" alt="lightMode" />
+          <div class="project__description">
+            <h4 class="primary">Light and Dark Mode</h4>
+            <span>Coding with HTML, CSS and JavaScript</span>
+          </div>
+        </a>
+        <a href="" class="project__item" target="blank">
+          <img class="project__img" src="imgs/projectsImg/JokeTeller.jpg" alt="Jokegenerater" />
+          <div class="project__description">
+            <h4 class="primary">Joke Generater</h4>
+            <span>Coding with HTML, CSS and JavaScript</span>
+          </div>
+        </a>
+        <a href="" class="project__item" target="blank">
+          <img class="project__img" src="imgs/projectsImg/MusicPlayer.jpg" alt="musicPlayer" />
+          <div class="project__description">
+            <h4 class="primary">Music Player</h4>
+            <span>Coding with HTML, CSS and JavaScript</span>
+          </div>
+        </a>
+        <a href="" class="project__item" target="blank">
+          <img class="project__img" src="imgs/projectsImg/PicInPic.jpg" alt="PicInPic" />
+          <div class="project__description">
+            <h4 class="primary">Pic In Pic</h4>
+            <span>Coding with HTML, CSS and JavaScript</span>
+          </div>
+        </a>
+        <a href="" class="project__item" target="blank">
+          <img
+            class="project__img"
+            src="imgs/projectsImg/QuoteGenerator.png"
+            alt="QuoteGenerator"
+          />
+          <div class="project__description">
+            <h4 class="primary">QuoteGenerator</h4>
+            <span>Coding with HTML, CSS and JavaScript</span>
+          </div>
+        </a>
+        <a href="" class="project__item" target="blank">
+          <img class="project__img" src="imgs/projectsImg/RoboFriends.png" alt="RoboFriends" />
+          <div class="project__description">
+            <h4 class="primary">RoboFriends</h4>
+            <span>Coding with React</span>
+          </div>
+        </a>
+      </div>
+    </section>
+    <!--Contact-->
+    <section id="contactme">
+      <h2 class="title primary">Contact</h2>
+      <h3 class="primary">Let's Talk</h3>
+      <p class="email">pado0327@gamil.com</p>
+      <div class="contactme__nav">
+        <a href="http://www.linkedin.com/in/pado0327" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="http://github.com/Pado0327" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <p class="conntactme__rights">2020 JaejinKim - All rights reserved.</p>
+    </section>
   </body>
 </html>

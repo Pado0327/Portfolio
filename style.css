@@ -15,7 +15,7 @@
   --font-xlarge: 3rem;
   --font-large: 2rem;
   --font-medium: 1.3rem;
-  --font-small: 0.75rem;
+  --font-small: 0.9rem;
 
   /* Font Family */
   --font-primary: 'Archivo', sans-serif;
@@ -104,10 +104,6 @@ a:active {
   color: var(--white-color);
 }
 
-/* TODO: 만약에 바꿀꺼면 여기다 넣으면됨. */
-.background__container {
-}
-
 /* Header */
 
 header {
@@ -131,9 +127,25 @@ header h2 {
   display: flex;
   justify-content: space-between;
   font-size: var(--font-medium);
-  height: 10%;
+  height: 60px;
   width: 100%;
   padding: 0 40px;
+  z-index: 1;
+}
+
+.header__navMoved {
+  background-color: hsl(0, 0%, 0%, 0.5);
+  border-bottom: 4px solid rgba(216, 218, 250, 0.5);
+  animation: mymove ease calc(var(--animation-duration) * 2);
+}
+
+@keyframes mymove {
+  0% {
+    top: -60px;
+  }
+  100% {
+    top: 0;
+  }
 }
 
 .header__logo {
@@ -161,6 +173,8 @@ header h2 {
   top: 2%;
   right: 10px;
   display: none;
+  cursor: pointer;
+  z-index: 2;
 }
 
 .bar {
@@ -304,8 +318,9 @@ header h2 {
   border: 1px solid darkgray;
   border-radius: 8px;
   margin-right: var(--margin-size-medium);
-  width: 120px;
+  width: 170px;
   padding: var(--padding-size-medium) var(--padding-size-large);
+  font-size: var(--font-medium);
 }
 
 .project__btn.active,
@@ -320,14 +335,9 @@ header h2 {
 }
 
 .project__count {
-  border: 1px solid var(co);
-  background-color: orange;
-  border-radius: 50%;
   color: var(--white-color);
   display: inline-block;
   margin-left: var(--margin-size-small);
-  width: 15px;
-  height: 15px;
   position: relative;
   top: -15px;
   left: 8px;
@@ -460,10 +470,11 @@ header h2 {
 @media screen and (max-width: 600px) {
   .header__nav {
     flex-direction: column;
-    height: 25%;
+    height: auto;
     justify-content: space-around;
-    padding: 0;
+    padding: 20px 0;
     text-align: center;
+    border-bottom: 1px solid white;
   }
 
   .nav__menulists {
@@ -487,6 +498,12 @@ header h2 {
 
   .mobile__nav__menu {
     display: block;
+  }
+
+  /* Project */
+  .project__btn {
+    font-size: var(--font-small);
+    width: 120px;
   }
 }
 
