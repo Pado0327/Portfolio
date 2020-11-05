@@ -6,8 +6,12 @@ let navBtn = document.querySelector('.mobile__nav__menu');
 
 // nav animation
 window.onscroll = () =>{
-        NavPop();
+    NavPop();
 }
+
+navBtn.addEventListener('click', ()=>{
+    nav.classList.toggle('down');
+})
 
 function NavPop() {
     if(window.pageYOffset > home.clientHeight){

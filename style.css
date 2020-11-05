@@ -170,7 +170,7 @@ header h2 {
 
 .mobile__nav__menu {
   position: fixed;
-  top: 2%;
+  top: 10px;
   right: 10px;
   display: none;
   cursor: pointer;
@@ -208,7 +208,7 @@ header h2 {
   margin-top: 40px;
   outline: none;
   padding: var(--padding-size-small);
-  transition: all var(--animation-duration) ease-in;
+  transition: all var(--animation-duration) ease;
 }
 
 .contactmebtn:hover {
@@ -474,7 +474,17 @@ header h2 {
     justify-content: space-around;
     padding: 20px 0;
     text-align: center;
+    background-color: hsl(0, 0%, 0%, 0.5);
     border-bottom: 1px solid white;
+    transform: translateY(-100%);
+  }
+
+  .header__navMoved {
+    animation: none;
+  }
+
+  .down {
+    transform: translateY(0);
   }
 
   .nav__menulists {
