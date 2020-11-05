@@ -92,6 +92,12 @@ h2 {
 
 button {
   font-weight: bold;
+  outline: none;
+  transition: all var(--animation-duration) ease;
+}
+
+button:active {
+  transform: translateY(8%);
 }
 
 a {
@@ -182,6 +188,19 @@ header h2 {
   height: 3px;
   background-color: var(--tomato-color);
   margin: 8px 0;
+  transition: var(--animation-duration);
+}
+
+.change .menubar1 {
+  transform: rotate(-45deg) translate(-7px, 8px);
+}
+
+.change .menubar2 {
+  opacity: 0;
+}
+
+.change .menubar3 {
+  transform: rotate(45deg) translate(-7px, 8px);
 }
 
 .header__main {
@@ -206,9 +225,7 @@ header h2 {
   font-size: var(--font-large);
   font-weight: bold;
   margin-top: 40px;
-  outline: none;
   padding: var(--padding-size-small);
-  transition: all var(--animation-duration) ease;
 }
 
 .contactmebtn:hover {
