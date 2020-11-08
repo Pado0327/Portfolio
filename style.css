@@ -200,7 +200,7 @@ header h2 {
 }
 
 .change .menubar3 {
-  transform: rotate(45deg) translate(-7px, 8px);
+  transform: rotate(45deg) translate(-8px, -8px);
 }
 
 .header__main {
@@ -366,12 +366,23 @@ header h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: all var(--animation-duration) ease-out;
+}
+
+.projects__projectsWithDescription.anim-out {
+  opacity: 0.6;
+  transform: scale(0.96) translateY(40px);
 }
 
 .project__item {
   position: relative;
   margin: 8px;
   background-color: #e4f4f7;
+}
+
+.invisible {
+  display: none;
 }
 
 .project__description {
