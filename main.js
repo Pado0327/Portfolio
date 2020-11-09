@@ -6,31 +6,37 @@ const home = document.querySelector('#home');
 const nav = document.querySelector('.header__nav');
 const navBtn = document.querySelector('.mobile__nav__menu');
 const navList = document.querySelector('.nav_menulists');
-
+const arrowUpBtn = document.querySelector('.topbtn');
 
 // popup nav after home section. 
-function NavPop() {
+function NavAndArrowUpPop() {
   if(window.pageYOffset >= home.clientHeight){
-      if(!nav.classList.contains('header__navMoved'))
-      nav.classList.add('header__navMoved');
+      if(!nav.classList.contains('header__navMoved')){
+        nav.classList.add('header__navMoved');
+      }
+      arrowUpBtn.classList.add('visibleArrow');
   } 
   else if (window.pageYOffset < home.clientHeight){
-      if(nav.classList.contains('header__navMoved'))
-      nav.classList.remove('header__navMoved');
+      if(nav.classList.contains('header__navMoved')){
+        nav.classList.remove('header__navMoved');
+      } 
+      arrowUpBtn.classList.remove('visibleArrow');
   }
 }
 
-document.addEventListener('scroll', () =>{
-  NavPop();
-  nav.classList.remove('down');
-  navBtn.classList.remove('change');
-});
-
 // nav hamburger btn event
 navBtn.addEventListener('click', ()=>{
-    nav.classList.toggle('down');
-    navBtn.classList.toggle('change');
+  nav.classList.toggle('down');
+  navBtn.classList.toggle('change');
 })
+
+// scroll animation. 
+document.addEventListener('scroll', () =>{
+  NavAndArrowUpPop();
+  nav.classList.remove('down');
+  navBtn.classList.remove('change'); 
+});
+
 
 // home description typing effect 
 const description = document.querySelector("#textContainer");
@@ -47,7 +53,17 @@ function printDescription() {
       }
     }, 100);
   }
-  
+
+window.onload = () => printDescription();
+
+// header contents faing effect when scorll down. 
+const headerMain = document.querySelector('.main__container');
+
+document.addEventListener('scroll', () => {
+  if(window.scrollY <= home.clientHeight){
+    headerMain.style.opacity = (home.clientHeight - window.scrollY)/home.clientHeight;
+  }
+})
 
 // project
 const projectbtnContainer = document.querySelector('.project__categories');
@@ -55,6 +71,7 @@ const projects = document.querySelectorAll('.project__item');
 const projectContainer = document.querySelector('.projects__projectsWithDescription');
 const projectbtn = document.querySelectorAll('.project__btn');
 
+// show corresponding project items with animation.
 projectbtnContainer.addEventListener('click', event => {
   const filter = event.target.dataset.filter || event.target.parentNode.dataset.filter;
   if(filter == null) {
@@ -86,7 +103,6 @@ projectbtnContainer.addEventListener('click', event => {
 
 
 
-window.onload = () => printDescription();
 
 
 

@@ -210,10 +210,16 @@ header h2 {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.main__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .contactmebtn {
@@ -230,6 +236,26 @@ header h2 {
 
 .contactmebtn:hover {
   transform: scale(1.2);
+}
+
+.topbtn {
+  position: fixed;
+  bottom: 5%;
+  right: 3%;
+  background-color: var(--tomato-color);
+  border-radius: 50%;
+  padding: var(--padding-size-small);
+  z-index: 2;
+  opacity: 0;
+  color: var(--white-color);
+  font-size: var(--font-large);
+  transition: all var(--animation-duration) ease-in;
+  pointer-events: none;
+}
+
+.visibleArrow {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* About */
@@ -266,7 +292,7 @@ header h2 {
 
 .skills__container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -274,6 +300,7 @@ header h2 {
   width: 4rem;
   height: 4rem;
   transition: all var(--animation-duration) ease;
+  margin-right: 10px;
 }
 
 .skills__item:hover {
@@ -399,13 +426,15 @@ header h2 {
   opacity: 0;
 }
 
-.project__description h4 {
-  border-bottom: 1px solid var(--white-color);
-  padding-bottom: var(--padding-size-small);
+.project__description:hover {
+  opacity: 0.8;
 }
 
-.project__description:hover {
-  opacity: 0.7;
+.project__description h4 {
+  color: orange;
+  font-weight: bold;
+  border-bottom: 1px solid var(--white-color);
+  padding-bottom: var(--padding-size-small);
 }
 
 .project__img {
@@ -477,6 +506,10 @@ header h2 {
   .contents__container {
     width: 90%;
   }
+
+  .description__container {
+    margin-bottom: 60px;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -538,6 +571,10 @@ header h2 {
     display: block;
   }
 
+  /* Aboutme */
+  .skills__item {
+    margin-right: 2px;
+  }
   /* Project */
   .project__btn {
     font-size: var(--font-small);
@@ -545,7 +582,7 @@ header h2 {
   }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 412px) {
   /* About me */
   .skills__container {
     margin: auto;
@@ -557,7 +594,7 @@ header h2 {
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 376px) {
   :root {
     /* Font Size  */
     --font-xxlarge: 2.4rem;
