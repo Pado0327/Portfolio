@@ -276,6 +276,10 @@ header h2 {
   margin-bottom: 50px;
 }
 
+#quote {
+  font-style: italic;
+}
+
 .contents__container {
   margin: auto;
   width: 65%;
