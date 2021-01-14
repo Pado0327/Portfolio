@@ -164,13 +164,13 @@ header h2 {
   list-style: none;
 }
 
-.nav__menulists a {
+.nav__menulists li {
   margin-right: var(--margin-size-large);
   cursor: pointer;
   opacity: 0.8;
 }
 
-.nav__menulists a:hover {
+.nav__menulists li:hover {
   opacity: 1;
 }
 
