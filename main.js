@@ -38,7 +38,10 @@ function OnClick(e) {
   if (dataLink == null) {
     return;
   }
-  document.querySelector(`${dataLink}`).scrollIntoView({ behavior: 'smooth' });
+
+  const scrollTo = document.querySelector(`${dataLink}`);
+
+  scrollTo.scrollIntoView({ behavior: 'smooth' });
 }
 
 navList.addEventListener('click', (e) => {
@@ -121,3 +124,13 @@ projectbtnContainer.addEventListener('click', (event) => {
     projectContainer.classList.remove('anim-out');
   }, 300);
 });
+
+// Projects Pop up
+const popUpbtn = document.querySelector('.popUp__close');
+
+projectContainer.addEventListener('click', (e) => {
+  console.log(e.target);
+  console.log(e.target.dataset.type);
+});
+
+// TODO: 이어서 하기.
