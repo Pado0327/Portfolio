@@ -111,18 +111,22 @@ a:active {
 }
 
 /* PopUp */
-.popUp__background__down {
+
+.popUp__background {
   position: fixed;
   top: 0;
   z-index: 100;
   background-color: hsla(0, 0%, 0%, 20%);
   height: 100vh;
   width: 100vw;
+}
+
+.down {
   opacity: 0;
   pointer-events: none;
 }
 
-.popUp__background__Up {
+.up {
   opacity: 1;
   pointer-events: initial;
 }
@@ -141,15 +145,15 @@ a:active {
   height: 70%;
 }
 
-.popUp__description {
+.popUp__contents {
   padding-left: var(--padding-size-large);
 }
 
-.popUp__description hr {
+.popUp__contents hr {
   width: 90%;
 }
 
-.popUp__description .languages {
+.popUp__contents .languages {
   margin-top: var(--margin-size-medium);
   text-align: center;
   font-weight: bold;
@@ -175,7 +179,7 @@ a:active {
 }
 
 .popUp__closebtn {
-  font-size: var(--font-medium);
+  font-size: var(--font-large);
   border: none;
   background-color: white;
 }
@@ -406,8 +410,8 @@ header h2 {
 #oracle {
   background: center / contain no-repeat url(imgs/logo/oracle.png);
 }
-#mongoDB {
-  background: center / contain no-repeat url(imgs/logo/mongo.png);
+#php {
+  background: center / contain no-repeat url(imgs/logo/php.png);
 }
 #cSharp {
   background: center / contain no-repeat url(imgs/logo/Csharp.png);

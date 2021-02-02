@@ -1,6 +1,6 @@
 'use strict';
 
-// Home
+// ========== Home =============
 // nav animation
 const home = document.querySelector('#home');
 const nav = document.querySelector('.header__nav');
@@ -86,7 +86,8 @@ document.addEventListener('scroll', () => {
   }
 });
 
-// project
+// ========== project =============
+
 const projectbtnContainer = document.querySelector('.project__categories');
 const projects = document.querySelectorAll('.project__item');
 const projectContainer = document.querySelector(
@@ -126,11 +127,58 @@ projectbtnContainer.addEventListener('click', (event) => {
 });
 
 // Projects Pop up
-const popUpbtn = document.querySelector('.popUp__close');
+const popUpbtn = document.querySelector('.popUp__closebtn');
+const popUp_background = document.querySelector('.popUp__background');
+const popUp_Container = document.querySelector('.popUp__container');
+const popUp_img = document.querySelector('#popUp__img');
+const popUp_title = document.querySelector('#popUp__title');
+const popUp_description = document.querySelector('#popUp__description');
+const popUp_languages = document.querySelector('.languages');
+const popUp_git = document.querySelector('#git');
+const popUp_site = document.querySelector('#site');
+let tempProject;
+//flag? to close when you click anywhere outside field.
+
+async function fetchProjectJSON() {
+  const response = await fetch('/projects.json');
+  const projects = await response.json();
+
+  return projects;
+}
 
 projectContainer.addEventListener('click', (e) => {
-  console.log(e.target);
-  console.log(e.target.dataset.type);
+  if (e.target.dataset.type == undefined) {
+    return;
+  }
+
+  if (e.target.classList[0] == 'popUp__openbtn') {
+    popUp_background.classList.replace('down', 'up');
+
+    fetchProjectJSON().then((projects) => {
+      tempProject = projects.filter((project) => {
+        return project['ProjectName'] == e.target.dataset.type;
+      });
+
+      ProvideInfoToPopUp(tempProject);
+    });
+  }
 });
 
-// TODO: 이어서 하기.
+popUp_background.addEventListener('click', (e) => {
+  if (
+    e.target.classList[0] == 'popUp__background' ||
+    e.target.classList[0] == 'popUp__closebtn'
+  ) {
+    popUp_background.classList.replace('up', 'down');
+  }
+});
+
+function ProvideInfoToPopUp(project) {
+  popUp_img.src = project[0]['img'];
+  popUp_img.alt = project[0]['ProjectName'];
+  popUp_title.innerText = project[0]['Title'];
+  popUp_description.innerText = project[0]['Description'];
+  popUp_languages.innerText = project[0]['Languages'];
+  popUp_git.href = project[0]['Github'];
+  popUp_site.href = project[0]['Site'];
+}

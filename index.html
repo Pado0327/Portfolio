@@ -20,34 +20,24 @@
   </head>
   <body>
     <!-- PopUp -->
-    <div class="popUp__background__down">
+    <div class="popUp__background down">
       <div class="popUp__container">
-        <img src="imgs/projectsImg/Carrots&Bugs.jpg" alt="" />
-        <div class="popUp__description">
-          <h3>Carrots & Bugs</h3>
+        <img src="" alt="" id="popUp__img" />
+        <div class="popUp__contents">
+          <h3 id="popUp__title"></h3>
           <hr />
-          <p>
-            Developed a game in which the bugs and carrots are randomly
-            positioned in a field. Within a limited time, the user needs to
-            click on all the carrots without clicking any bugs.
-          </p>
-          <p class="languages">HTML, CSS, JavaScript</p>
+          <p id="popUp__description"></p>
+          <p class="languages"></p>
           <div class="popUP__description__bottom">
             <div class="popUp__links">
-              <a
-                href="https://github.com/Pado0327/JokeGenerator"
-                target="_blank"
+              <a id="git" href="" target="_blank"
                 ><i class="fab fa-github"></i
               ></a>
-              <a
-                href="https://pado0327.github.io/JokeGenerator/"
-                target="_blank"
+              <a id="site" href="" target="_blank"
                 ><i class="fas fa-globe-americas"></i
               ></a>
             </div>
-            <button class="popUp__closebtn">
-              <i class="fas fa-times"></i>
-            </button>
+            <button class="popUp__closebtn">x</button>
           </div>
         </div>
       </div>
@@ -68,9 +58,7 @@
           <h1 class="header__introP primary">
             Hello, my name is <span id="name">Jaejin!</span>
           </h1>
-          <h2 id="textContainer" class="primary">
-            I'M A FRONT-END WEB DEVELOPER
-          </h2>
+          <h2 id="textContainer" class="primary">I'M A SOFTWARE DEVELOPER</h2>
           <button class="contactmebtn" data-link="#contactme">
             Contact Me
           </button>
@@ -110,10 +98,10 @@
             <div class="skills__item" id="css"></div>
             <div class="skills__item" id="Js"></div>
             <div class="skills__item" id="react"></div>
-            <div class="skills__item" id="nodeJs"></div>
             <div class="skills__item" id="oracle"></div>
-            <div class="skills__item" id="mongoDB"></div>
+            <div class="skills__item" id="php"></div>
             <div class="skills__item" id="cSharp"></div>
+            <div class="skills__item" id="nodeJs"></div>
             <div class="skills__item" id="github"></div>
           </div>
         </div>
@@ -137,7 +125,7 @@
         <div class="project__item js" data-type="js">
           <img
             class="project__img"
-            src="imgs/projectsImg/Carrots&Bugs.jpg"
+            src="imgs/projectsImg/Carrots&Bugs.png"
             alt="CarrotsAndBugs"
           />
           <div class="project__description">
@@ -161,18 +149,6 @@
         <div class="project__item js" data-type="js">
           <img
             class="project__img"
-            src="imgs/projectsImg/lightAndDarkMode.jpg"
-            alt="lightMode"
-          />
-          <div class="project__description">
-            <h4 class="primary">Light and Dark Mode</h4>
-            <span>Coding with HTML, CSS and JavaScript</span>
-            <button class="popUp__openbtn" data-type="Light">MoreInfo</button>
-          </div>
-        </div>
-        <div class="project__item js" data-type="js">
-          <img
-            class="project__img"
             src="imgs/projectsImg/JokeTeller.jpg"
             alt="Jokegenerater"
           />
@@ -180,6 +156,30 @@
             <h4 class="primary">Joke Generater</h4>
             <span>Coding with HTML, CSS and JavaScript</span>
             <button class="popUp__openbtn" data-type="Joke">MoreInfo</button>
+          </div>
+        </div>
+        <div class="project__item rc" data-type="react">
+          <img
+            class="project__img"
+            src="imgs/projectsImg/RoboFriends.png"
+            alt="RoboFriends"
+          />
+          <div class="project__description">
+            <h4 class="primary">RoboFriends</h4>
+            <span>Coding with React</span>
+            <button class="popUp__openbtn" data-type="Robo">MoreInfo</button>
+          </div>
+        </div>
+        <div class="project__item js" data-type="js">
+          <img
+            class="project__img"
+            src="imgs/projectsImg/lightAndDarkMode.jpg"
+            alt="lightMode"
+          />
+          <div class="project__description">
+            <h4 class="primary">Light and Dark Mode</h4>
+            <span>Coding with HTML, CSS and JavaScript</span>
+            <button class="popUp__openbtn" data-type="Light">MoreInfo</button>
           </div>
         </div>
         <div class="project__item js" data-type="js">
@@ -216,18 +216,6 @@
             <h4 class="primary">QuoteGenerator</h4>
             <span>Coding with HTML, CSS and JavaScript</span>
             <button class="popUp__openbtn" data-type="Quote">MoreInfo</button>
-          </div>
-        </div>
-        <div class="project__item rc" data-type="react">
-          <img
-            class="project__img"
-            src="imgs/projectsImg/RoboFriends.png"
-            alt="RoboFriends"
-          />
-          <div class="project__description">
-            <h4 class="primary">RoboFriends</h4>
-            <span>Coding with React</span>
-            <button class="popUp__openbtn" data-type="Robo">MoreInfo</button>
           </div>
         </div>
       </div>
