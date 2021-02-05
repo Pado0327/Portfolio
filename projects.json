@@ -6,7 +6,16 @@
     "Languages": "HTML, CSS, JavaScript",
     "img": "./imgs/projectsImg/Carrots&Bugs.png",
     "Github": "https://github.com/Pado0327/CarrotsAndBugs",
-    "Site": "https://github.com/Pado0327/CarrotsAndBugs"
+    "Site": "https://pado0327.github.io/CarrotsAndBugs/index.html"
+  },
+  {
+    "ProjectName": "YouTube",
+    "Title": "YouTube Clone",
+    "Description": "A YouTube Clone website that shows most popular videos and provides search function using YouTube APIs",
+    "Languages": "HTML, CSS, JavaScript",
+    "img": "./imgs/projectsImg/YouTube.png",
+    "Github": "https://github.com/Pado0327/YouTubeClone.git",
+    "Site": "https://pado0327.github.io/YouTubeClone"
   },
   {
     "ProjectName": "Pizza",
@@ -52,15 +61,6 @@
     "img": "./imgs/projectsImg/MusicPlayer.jpg",
     "Github": "https://github.com/Pado0327/musicPlayer",
     "Site": "https://pado0327.github.io/musicPlayer/index.html"
-  },
-  {
-    "ProjectName": "Pic",
-    "Title": "Pic In Pic",
-    "Description": "A simple website that provides pic in pic function.",
-    "Languages": "HTML, CSS, JavaScript",
-    "img": "./imgs/projectsImg/PicInPic.jpg",
-    "Github": "https://github.com/Pado0327/PicInPic",
-    "Site": "https://pado0327.github.io/PicInPic/"
   },
   {
     "ProjectName": "Quote",
