@@ -12,7 +12,7 @@
     "ProjectName": "YouTube",
     "Title": "YouTube Clone",
     "Description": "A YouTube Clone website that shows most popular videos and provides search function using YouTube APIs",
-    "Languages": "HTML, CSS, JavaScript",
+    "Languages": "React",
     "img": "./imgs/projectsImg/YouTube.png",
     "Github": "https://github.com/Pado0327/YouTubeClone.git",
     "Site": "https://pado0327.github.io/YouTubeClone"

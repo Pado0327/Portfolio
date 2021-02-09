@@ -602,6 +602,16 @@ header h2 {
   .description__container {
     margin-bottom: 60px;
   }
+
+  /*Project PopUp */
+  .popUp__container {
+    position: relative;
+    top: 15%;
+    margin: 0 auto;
+    background-color: white;
+    max-width: 700px;
+    height: 650px;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -683,6 +693,22 @@ header h2 {
 
   #aboutme__image {
     display: none;
+  }
+
+  /*Project PopUp*/
+  .popUp__container {
+    position: relative;
+    top: 23%;
+    margin: 0 auto;
+    padding-bottom: var(--padding-size-medium);
+    background-color: white;
+    max-width: 700px;
+    height: auto;
+  }
+
+  .popUp__background img {
+    width: 100%;
+    height: 65%;
   }
 }
 
