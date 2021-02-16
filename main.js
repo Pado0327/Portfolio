@@ -140,7 +140,7 @@ let tempProject;
 //flag? to close when you click anywhere outside field.
 
 async function fetchProjectJSON() {
-  const response = await fetch('/assets/projects.json');
+  const response = await fetch('projects.json');
   const projects = await response.json();
 
   return projects;
