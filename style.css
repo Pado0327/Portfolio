@@ -284,7 +284,7 @@ header h2 {
 .header__main {
   height: 100vh;
   display: flex;
-  background-image: url(imgs/headeBackground.png);
+  background-image: url(imgs/headBackground.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
