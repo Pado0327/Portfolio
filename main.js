@@ -24,7 +24,7 @@ function NavAndArrowUpPop() {
 
 // nav hamburger btn event
 navBtn.addEventListener('click', () => {
-  nav.classList.toggle('down');
+  nav.classList.toggle('hdown');
   navBtn.classList.toggle('change');
 });
 
@@ -55,7 +55,7 @@ contactBtn.addEventListener('click', (e) => {
 // scroll animation.
 document.addEventListener('scroll', () => {
   NavAndArrowUpPop();
-  nav.classList.remove('down');
+  nav.classList.remove('hdown');
   navBtn.classList.remove('change');
 });
 

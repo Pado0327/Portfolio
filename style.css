@@ -214,7 +214,7 @@ header h2 {
   height: 60px;
   width: 100%;
   padding: 0 40px;
-  z-index: 1;
+  z-index: 3;
 }
 
 .header__navMoved {
@@ -646,7 +646,7 @@ header h2 {
     animation: none;
   }
 
-  .down {
+  .hdown {
     transform: translateY(0);
   }
 
