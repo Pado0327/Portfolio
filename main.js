@@ -68,7 +68,7 @@ function printDescription() {
   let index = 0;
   let timer = setInterval(function () {
     description.innerHTML += text.charAt(index);
-    if (++index == description.length) {
+    if (++index == text.length) {
       clearInterval(timer);
     }
   }, 100);
