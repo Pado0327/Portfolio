@@ -32,8 +32,15 @@ navBtn.addEventListener('click', () => {
 });
 
 //scrolling to the section
+const logo = document.querySelector('.header__logo');
 const navList = document.querySelector('.nav__menulists');
 const contactBtn = document.querySelector('.contactmebtn');
+const navItemArray = [
+  navList.children[0],
+  navList.children[1],
+  navList.children[2],
+  navList.children[3],
+];
 
 function OnClick(e) {
   const target = e.target;
@@ -48,12 +55,17 @@ function OnClick(e) {
   selectNavItem(target);
 }
 
+logo.addEventListener('click', () => {
+  selectNavItem(navList.children[0]);
+});
+
 navList.addEventListener('click', (e) => {
   OnClick(e);
 });
 
 contactBtn.addEventListener('click', (e) => {
   OnClick(e);
+  selectNavItem(navList.children[3]);
 });
 
 // scroll animation.
@@ -92,12 +104,6 @@ document.addEventListener('scroll', () => {
 
 // highlight nav list when scrolling down.
 const sectionArray = [home, aboutme, project, contactme];
-const navItemArray = [
-  navList.children[0],
-  navList.children[1],
-  navList.children[2],
-  navList.children[3],
-];
 
 let SelectedNavitem = navItemArray[0];
 let index = 0;
