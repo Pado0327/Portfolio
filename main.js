@@ -3,6 +3,9 @@
 // ========== Home =============
 // nav animation
 const home = document.querySelector('#home');
+const aboutme = document.querySelector('#aboutme');
+const project = document.querySelector('#project');
+const contactme = document.querySelector('#contactme');
 const nav = document.querySelector('.header__nav');
 const navBtn = document.querySelector('.mobile__nav__menu');
 const arrowUpBtn = document.querySelector('.topbtn');
@@ -42,6 +45,7 @@ function OnClick(e) {
   const scrollTo = document.querySelector(`${dataLink}`);
 
   scrollTo.scrollIntoView({ behavior: 'smooth' });
+  selectNavItem(target);
 }
 
 navList.addEventListener('click', (e) => {
@@ -76,7 +80,7 @@ function printDescription() {
 
 window.onload = () => printDescription();
 
-// header contents fading effect when scorll down.
+// header contents fading effect when scorlling down.
 const headerMain = document.querySelector('.main__container');
 
 document.addEventListener('scroll', () => {
@@ -84,6 +88,62 @@ document.addEventListener('scroll', () => {
     headerMain.style.opacity =
       (home.clientHeight - window.scrollY) / home.clientHeight;
   }
+});
+
+// highlight nav list when scrolling down.
+const sectionArray = [home, aboutme, project, contactme];
+const navItemArray = [
+  navList.children[0],
+  navList.children[1],
+  navList.children[2],
+  navList.children[3],
+];
+
+let SelectedNavitem = navItemArray[0];
+let index = 0;
+
+function selectNavItem(selected) {
+  SelectedNavitem.classList.remove('highlight');
+  SelectedNavitem = selected;
+  SelectedNavitem.classList.add('highlight');
+}
+
+const observerCallback = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting && entry.intersectionRatio > 0) {
+      const selectedIndex = sectionArray.indexOf(entry.target);
+      if (entry.boundingClientRect.y < 0) {
+        index = selectedIndex + 1;
+      } else if (entry.boundingClientRect.y > 0) {
+        index = selectedIndex - 1;
+      }
+    }
+  });
+};
+
+const observerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.3,
+};
+
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+sectionArray.forEach((section) => {
+  observer.observe(section);
+});
+
+window.addEventListener('wheel', () => {
+  if (window.scrollY === 0) {
+    index = 0;
+  } else if (
+    Math.round(window.scrollY + window.innerHeight) >=
+    document.body.clientHeight
+  ) {
+    index = navItemArray.length - 1;
+  }
+
+  selectNavItem(navItemArray[index]);
 });
 
 // ========== project =============
@@ -161,6 +221,8 @@ projectContainer.addEventListener('click', (e) => {
 
       ProvideInfoToPopUp(tempProject);
     });
+
+    document.body.style.overflow = 'hidden';
   }
 });
 
@@ -170,6 +232,7 @@ popUp_background.addEventListener('click', (e) => {
     e.target.classList[0] == 'popUp__closebtn'
   ) {
     popUp_background.classList.replace('up', 'down');
+    document.body.style.overflow = 'visible';
   }
 });
 
@@ -177,7 +240,7 @@ function ProvideInfoToPopUp(project) {
   popUp_img.src = project[0]['img'];
   popUp_img.alt = project[0]['ProjectName'];
   popUp_title.innerText = project[0]['Title'];
-  popUp_description.innerText = project[0]['Description'];
+  popUp_description.innerHTML = project[0]['Description'];
   popUp_languages.innerText = project[0]['Languages'];
   popUp_git.href = project[0]['Github'];
   popUp_site.href = project[0]['Site'];

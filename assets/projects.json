@@ -2,7 +2,7 @@
   {
     "ProjectName": "Carrot",
     "Title": "Carrots & Bugs",
-    "Description": "A game in which the bugs and carrots are randomly positioned in a field. Within a limited time, the user needs to click on all the carrots without clicking any bugs.",
+    "Description": "<b> A JavaScript game </b> in which the bugs and carrots are randomly positioned in a field. Within a limited time, the user needs to click on all the carrots without clicking any bugs.",
     "Languages": "HTML, CSS, JavaScript",
     "img": "./imgs/projectsImg/Carrots&Bugs.png",
     "Github": "https://github.com/Pado0327/CarrotsAndBugs",
@@ -11,7 +11,7 @@
   {
     "ProjectName": "YouTube",
     "Title": "YouTube Clone",
-    "Description": "A YouTube Clone website that shows most popular videos and provides search function using YouTube APIs",
+    "Description": "A YouTube Clone website that shows most popular videos and provides search function <b> using YouTube APIs</b>",
     "Languages": "React",
     "img": "./imgs/projectsImg/YouTube.jpg",
     "Github": "https://github.com/Pado0327/YouTubeClone.git",
@@ -20,7 +20,7 @@
   {
     "ProjectName": "Pizza",
     "Title": "Pizzageddon",
-    "Description": "A pizza website that shows the pizza menu retrieved from the JSON file, allows customers to add a pizza to a cart and provides contact form validation.",
+    "Description": "A pizza website that shows the pizza menu <b> retrieved from the JSON file </b>, allows customers to add a pizza to a cart and provides <b> contact form validation </b>.",
     "Languages": "HTML, CSS, JavaScript",
     "img": "./imgs/projectsImg/Pizzageddon.jpg",
     "Github": "https://github.com/Pado0327/Pizzageddon",
@@ -29,7 +29,7 @@
   {
     "ProjectName": "Joke",
     "Title": "Joke Generator",
-    "Description": "A random joke generator website. When the user clicks the button, robot gets a random joke using joke API and says it outloud using speech API.",
+    "Description": "A random joke generator website. When the user clicks the button, robot gets a random joke <b> using joke API </b> and says it outloud <b> using speech API </b>.",
     "Languages": "HTML, CSS, JavaScript",
     "img": "./imgs/projectsImg/JokeTeller.jpg",
     "Github": "https://github.com/Pado0327/JokeGenerator",
@@ -38,7 +38,7 @@
   {
     "ProjectName": "Robo",
     "Title": "RoboFriends",
-    "Description": "A Robo Friends app that shows a list of users from JSON placeholder API. The features include filtering of users, serach box and error boundary message.",
+    "Description": "A Robo Friends app that shows a list of users from <b> JSON placeholder API </b>. The features include filtering of users, serach box and error boundary message.",
     "Languages": "React",
     "img": "./imgs/projectsImg/RoboFriends.png",
     "Github": "https://github.com/Pado0327/robofriends",

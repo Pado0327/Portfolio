@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600&family=PT+Sans:ital@1&family=Roboto:wght@500&family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 /* Global */
 :root {
@@ -12,14 +13,14 @@
 
   /* Font Size  */
   --font-xxlarge: 5rem;
-  --font-xlarge: 3rem;
-  --font-large: 2rem;
+  --font-xlarge: 2rem;
+  --font-large: 1.7rem;
   --font-medium: 1.3rem;
   --font-small: 0.9rem;
 
   /* Font Family */
   --font-primary: 'Archivo', sans-serif;
-  --font-secondary: 'Roboto', sans-serif;
+  --font-secondary: 'Open Sans', sans-serif;
   --font-logo: 'Sacramento', cursive;
 
   /* Font Weight */
@@ -110,9 +111,15 @@ a:active {
   color: var(--white-color);
 }
 
+.highlight {
+  color: #e31b6d;
+}
+
 /* PopUp */
 
 .popUp__background {
+  display: flex;
+  align-items: center;
   position: fixed;
   top: 0;
   z-index: 100;
@@ -132,8 +139,6 @@ a:active {
 }
 
 .popUp__container {
-  position: relative;
-  top: 18%;
   margin: 0 auto;
   background-color: white;
   max-width: 700px;
@@ -184,13 +189,13 @@ a:active {
   background-color: white;
 }
 
-.popUp__close:hover {
+.popUp__closebtn:hover {
   cursor: pointer;
 }
 
 /* Header */
 
-header {
+#home {
   color: var(--white-color);
 }
 
@@ -198,7 +203,7 @@ header {
   color: var(--tomato-color);
 }
 
-header h2 {
+#home h2 {
   font-size: var(--font-xlarge);
   border: none;
   margin: 10px 0 20px;
@@ -340,17 +345,15 @@ header h2 {
 
 #aboutme {
   display: flex;
-  flex-direction: column;
   align-items: center;
   text-align: center;
-  background-color: var(--pinkish-white-color);
+  background-color: whitesmoke;
   padding: 50px 0;
 }
 
 #aboutme__image {
   height: 250px;
   width: 200px;
-  border-radius: 50%;
   margin-bottom: 50px;
 }
 
@@ -365,11 +368,15 @@ header h2 {
 }
 
 .contents__container h2 {
-  font-size: var(--font-large);
+  font-size: var(--font-xlarge);
+}
+
+.aboutme__description {
+  padding: 0 40px;
 }
 
 .description__container {
-  margin-bottom: 100px;
+  margin-bottom: 70px;
 }
 
 .skills__container {
@@ -605,12 +612,10 @@ header h2 {
 
   /*Project PopUp */
   .popUp__container {
-    position: relative;
-    top: 15%;
     margin: 0 auto;
     background-color: white;
     max-width: 700px;
-    height: 600px;
+    height: auto;
   }
 }
 
@@ -683,6 +688,10 @@ header h2 {
     width: 120px;
   }
 
+  .popUp__background {
+    display: block;
+  }
+
   .popUp__container {
     position: relative;
     top: 23%;
@@ -713,7 +722,7 @@ header h2 {
   /*Project PopUp*/
   .popUp__container {
     position: relative;
-    top: 23%;
+    top: 8%;
     margin: 0 auto;
     padding-bottom: var(--padding-size-medium);
     background-color: white;
@@ -723,7 +732,7 @@ header h2 {
 
   .popUp__background img {
     width: 100%;
-    height: 65%;
+    height: 200px;
   }
 }
 
